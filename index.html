@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Jack</title>
+        <link rel="stylesheet" href="blackjack.css">
+        <script src="blackjack.js"></script>
+    </head>
+
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"
+         integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ==" 
+         crossorigin="anonymous"></script>
+        <h2 style="color:red;">Dealer: <span id="dealer-sum"></span></h2>
+        <div id="dealer-cards">
+            <img id="hidden" src="./cards/BACK.png">
+        </div>
+        
+        <h2 style="color:red;">You scored: <span id="your-sum"></span></h2>
+        
+        <div id="your-cards"></div>
+
+        <br>
+        <button id="hit">Hit</button>
+        <script src="sound.js"></script>
+        <button id="stay">Stay</button>
+        <div class="res">
+        <p id="results"></p>
+        </div>
+        <button type="button" id="bg-button"class="b1" onClick="refreshPage()">
+            <h1>Play again</h1>
+            <script>
+                function refreshPage(){
+                    window.location.reload();
+                } 
+                </script>
+        </button>
+        
+        <button type="button" class="b1" id="bg1-button"><h1>Change background</h1></button>
+            
+            <script>
+               var images = [
+  'p1.jpg',
+  'w.jpg',
+  'back.jpg',
+  'hasbik.jpg',
+  'hasbik1.jpg',
+  'bb.jpg',
+];
+
+// getting a reference to the button and the element to change
+var button = document.getElementById('bg1-button');
+var element = document.body; 
+
+// setting up a click event listener for the button
+button.addEventListener('click', function() {
+  // getting a random image path from the array
+  var randomIndex = Math.floor(Math.random() * images.length);
+  var randomImagePath = images[randomIndex];
+
+  // setting the background image of the target element
+  element.style.backgroundImage = 'url(' + randomImagePath + ')';
+});
+            </script>
+        
+    </body>
+</html>

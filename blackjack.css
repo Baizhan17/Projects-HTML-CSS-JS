@@ -1,0 +1,59 @@
+/*-----------------------BODY-----------------------------------------*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-image: url("back.jpg");
+  cursor: cell;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*-----------------------CARDS-----------------------------------------*/
+#dealer-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 5px;
+}
+#dealer-cards img:hover {
+  width: 200px;
+  height: 200px;
+}
+#your-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 5px;
+}
+#your-cards img:hover {
+  width: 200px;
+  height: 200px;
+}
+/*-----------------------BUTTONS-----------------------------------------*/
+#hit {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+}
+
+#stay {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+}
+.res {
+  margin-top: 50px;
+}
+.b1 {
+  width: auto;
+  height: 100px;
+  background-color: green;
+  border-radius: 25px;
+}
+.b1:hover {
+  opacity: 0.5;
+}
+.b1:nth-child(2) {
+  position: absolute;
+  bottom: 50px;
+}
+#image-container {
+  background-image: url(back.jpg);
+}
